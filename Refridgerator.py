@@ -1,18 +1,26 @@
-class Refridgerator: 
+class Refrigerator: 
+    capacity = 25
+    fridgelist= []; 
 
-    fridgelist = [];
-    def __init__(self, capacity):
-        self.capacity = capacity; 
-        self.fridgelist = [capacity];
+    def __init__(self):
+        self.fridgelist = [];
 
-    def addItem(self, produce, amount): 
-        for amount in produce.amount(); 
-        self.fridgelist.append(produce); 
+    def add_item(self, item, amount): 
+        if((len(self.fridgelist) + amount) <= self.capacity):
+            for x in range(amount): 
+             self.fridgelist.append(item);
+        
 
-    def check_for_expired(self): 
+    def check_inventory(self): 
         for items in self.fridgelist: 
             print(items, items.get_days_until_expiration());
-            if(self.items.get_days_until_expiration() ==
 
+    def remove_expired(self): 
+        for item in self.fridgelist: 
+            if(item.get_days_until_expiration() is 0): 
+                print(self.fridgelist.remove(item))
 
     
+
+
+
