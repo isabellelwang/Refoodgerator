@@ -10,7 +10,6 @@ class Refrigerator:
             for x in range(amount): 
              self.fridgelist.append(item); 
             
-        
 
     def print_items(self): 
         for items in self.fridgelist: 

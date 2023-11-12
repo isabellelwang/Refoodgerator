@@ -1,6 +1,6 @@
 from Produce import *; 
 from Refridgerator import *; 
-from user_food import *
+
 
 class test: 
     def main(): 
@@ -14,11 +14,10 @@ class test:
                 exit()
             elif "1" in choice:    
                 item = input("What produce would you like to put in the fridge?\n")
-                user_food(item)
                 item_num = int(input("What is the number of items you would like to store in fridge\n"))
-                exp_day = input("How many days until this produce expire?\n")
+                exp_day = Produce.expiry_time(item)
 
-                product = Produce(item, exp_day)
+                product = Produce(item)
         
                 myfridge.add_item(product, item_num); 
                 print(str(item_num), item, " was added into your refridgerator!"); 
@@ -35,5 +34,5 @@ class test:
                 print("Error. Please choose a number 0 to 3.")
             exit_menu = True  
 
-        choice = input("What would you like to do? Press: \n 0. Exit Program \n1.Add produce \n 2.Print items in fridge\n 3.Remove produce \n")
+        choice = input("What would you like to do? Press: \n 0. Exit Program \n 1.Add produce \n 2.Print items in fridge \n 3.Remove produce \n")
     main()
