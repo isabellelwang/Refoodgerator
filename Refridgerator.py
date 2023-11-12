@@ -8,7 +8,8 @@ class Refrigerator:
     def add_item(self, item, amount): 
         if((len(self.fridgelist) + amount) <= self.capacity):
             for x in range(amount): 
-             self.fridgelist.append(item);
+             self.fridgelist.append(item); 
+            
         
 
     def print_items(self): 

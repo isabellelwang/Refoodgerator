@@ -1,7 +1,7 @@
-def user_food():
-    food_item = input("Please input the food item you'd like to store in lowercase and non-plural (Check your spelling! Our varieties are limited to the general categories, such as cabbage) ")
+def user_food(food_item):
+    #food_item = input("Please input the food item you'd like to store in lowercase and non-plural (Check your spelling! Our varieties are limited to the general categories, such as cabbage) ")
     expiry_time(food_item)
-    return food_item
+    #return food_item
 
 
 

@@ -1,5 +1,6 @@
 from Produce import *; 
 from Refridgerator import *; 
+from user_food import *
 
 class test: 
     def main(): 
@@ -13,6 +14,7 @@ class test:
                 exit()
             elif "1" in choice:    
                 item = input("What produce would you like to put in the fridge?\n")
+                user_food(item)
                 item_num = int(input("What is the number of items you would like to store in fridge\n"))
                 exp_day = input("How many days until this produce expire?\n")
 
