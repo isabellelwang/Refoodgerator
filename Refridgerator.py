@@ -11,14 +11,20 @@ class Refrigerator:
              self.fridgelist.append(item);
         
 
-    def check_inventory(self): 
+    def print_items(self): 
         for items in self.fridgelist: 
-            print(items, items.get_days_until_expiration());
+            print(items, ": ", items.get_days_until_expiration());
 
     def remove_expired(self): 
-        for item in self.fridgelist: 
-            if(item.get_days_until_expiration() is 0): 
-                print(self.fridgelist.remove(item))
+        if(len(self.fridgelist) > 0): 
+            for item in self.fridgelist: 
+                if(item.get_days_until_expiration() == 0): 
+                    print(self.fridgelist.remove(item), " is removed.")
+
+    def remove_item(self, product): 
+        if(len(self.fridgelist) > 0): 
+            print(self.fridgelist.remove(product), " is removed") 
+        
 
     
 
