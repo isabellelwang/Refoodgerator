@@ -5,10 +5,10 @@ class test:
     def main(): 
         myfridge = Refrigerator(); 
 
-        choice = int(input("Press 0 to exit"))
+        choice = choice = input("What would you like to do? Press: \n 0. Exit Program \n1.Add produce \n 2.Print items in fridge\n 3.Remove produce \n")
 
         while(choice != 0) : 
-            choice = input("What would you like to do? Press: \n 1.Add produce \n 2.Print items in fridge\n 3.Remove produce")
+            choice = input("What would you like to do? Press: \n 0. Exit Program \n1.Add produce \n 2.Print items in fridge\n 3.Remove produce \n")
             
             if(choice == 1):    
                 item = input("What produce would you like to put in the fridge?\n")
@@ -28,9 +28,9 @@ class test:
                 elif (option == 2): 
                     prod = input("What produce would you like to remove?")
                     myfridge.remove_item(Produce(product))
-            else { 
+            else :
                 print("Error. Please choose a number 0 to 3.")
-            }
+            
     
     
     
